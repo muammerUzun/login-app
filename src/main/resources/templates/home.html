@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HOME - ANA SAYFA</title>
+</head>
+
+<style>
+	body{background-color: #f5f5f5;margin:0;padding: 0;}
+	.dashboard{background-color: #0e057e;color: #fff;padding: 40px;text-align: center;}
+	.dashboard__title{font-size: 24px;margin-top: 0;}
+	.dashboard__user{margin-top: 20px;}
+	.dashboard__user-name{font-size: 32px;color: #c299d0;}
+	.btn{background-color: #4CAF50;border: none; color: white;padding: 10px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;}
+  
+</style>
+<body>
+	
+	<div class="dashboard">
+		<h1 class="dashboard__title">wellcome to the Dashboard...</h1>
+		<div class="dashboard__user">
+			<h2 th:text="${userdetail.fullname}" class="dashboard__user-name">Users name</h2>
+			<span sec:authorize="isAuthenticated"> <a class="btn" th:href="@{/logout}">Logout</a></span>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
